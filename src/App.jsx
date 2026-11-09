@@ -78,7 +78,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-slate-950 text-white flex flex-col selection:bg-emerald-600 selection:text-white font-sans">
       
       {/* Top Navigation */}
       <Navbar
