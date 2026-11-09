@@ -20,7 +20,7 @@ import { runDossierAgent } from '../src/services/dossierAgent.js';
 console.log('--- Running Multi-Agent Core Engine Tests ---');
 
 async function testPipeline() {
-  // Test Case 1: Clean Application (Sabid)
+  // Test Case 1: Clean Application (Arifur Rahman)
   const cleanApp = {
     ...PRESET_APPLICATIONS[0].data,
     id: 'test-app-001',

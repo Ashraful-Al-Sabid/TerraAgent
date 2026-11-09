@@ -4,56 +4,60 @@
 
 @layer base {
   :root {
-    --color-primary: 22 163 74;
-    --color-primary-dark: 20 83 45;
+    color-scheme: dark;
   }
 
-  /* Custom scrollbars according to craft floor */
+  body {
+    background-color: #070a12;
+    color: #f1f5f9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbars according to Impeccable craft floor */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #090d16;
+    background: #070a12;
   }
   ::-webkit-scrollbar-thumb {
     background: #1e293b;
-    border-radius: 4px;
-    border: 2px solid #090d16;
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #334155;
   }
 
-  /* Browser selection and caret */
+  /* High contrast browser text selection */
   ::selection {
     background-color: #059669;
     color: #ffffff;
   }
 
+  /* Focus ring styling - accessible & understated */
+  *:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #070a12, 0 0 0 4px #10b981;
+  }
+
   input, textarea, select {
     caret-color: #10b981;
   }
-
-  /* Focus ring styling */
-  *:focus-visible {
-    outline: 2px solid #10b981;
-    outline-offset: 2px;
-  }
 }
 
-/* Custom pulse animations for active agent pipelines */
-@keyframes agent-pulse {
+/* Subtle pulse for active pipeline agents */
+@keyframes pulse-subtle {
   0%, 100% {
     opacity: 1;
-    transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.03);
+    opacity: 0.65;
   }
 }
 
-.animate-agent-active {
-  animation: agent-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

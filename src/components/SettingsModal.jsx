@@ -5,12 +5,10 @@ import {
   Key, 
   Database, 
   Check, 
-  Sparkles, 
   RotateCcw,
-  ExternalLink,
-  ShieldAlert
+  ShieldCheck
 } from 'lucide-react';
-import { getSystemSettings, saveSystemSettings } from '../lib/supabase';
+import { getSystemSettings, saveSystemSettings } from '../lib/supabase.js';
 
 export function SettingsModal({ onClose, onSettingsUpdated }) {
   const current = getSystemSettings();
@@ -45,11 +43,11 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-lg shadow-2xl p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+      <div className="bg-[#0c1220] border border-white/[0.08] rounded-2xl w-full max-w-lg shadow-gov-raised p-6">
         
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
           <div className="flex items-center space-x-2">
             <Settings className="w-5 h-5 text-emerald-400" />
             <h3 className="font-bold text-white text-base">System Settings & Cloud Integration</h3>
@@ -63,7 +61,7 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
         </div>
 
         {saveSuccess && (
-          <div className="mt-4 p-3 rounded-xl bg-emerald-950 border border-emerald-500/40 text-emerald-200 text-xs flex items-center space-x-2">
+          <div className="mt-4 p-3 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs flex items-center space-x-2">
             <Check className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>Credentials saved securely! Connecting to endpoints...</span>
           </div>
@@ -74,28 +72,28 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
           {/* OpenAI API Key */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5">
+              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5 font-sans">
                 <Key className="w-3.5 h-3.5 text-emerald-400" />
                 <span>OpenAI API Key (Optional)</span>
               </label>
-              <span className="text-[10px] text-slate-500">gpt-4o-mini inference</span>
+              <span className="text-[10px] text-slate-500 font-mono">gpt-4o-mini engine</span>
             </div>
             <input
               type="password"
               value={openaiApiKey}
               onChange={(e) => setOpenaiApiKey(e.target.value)}
               placeholder="sk-proj-..."
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
+              className="w-full bg-[#070a12] border border-white/[0.08] rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
             />
             <p className="text-[11px] text-slate-500 mt-1">
-              If omitted, TerraAgent seamlessly uses its built-in heuristic agent simulation engine.
+              If omitted, TerraAgent seamlessly runs its deterministic heuristic multi-agent simulation.
             </p>
           </div>
 
           {/* Supabase URL */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5">
+              <label className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5 font-sans">
                 <Database className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Supabase Project URL (Optional)</span>
               </label>
@@ -105,13 +103,13 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
               value={supabaseUrl}
               onChange={(e) => setSupabaseUrl(e.target.value)}
               placeholder="https://xyz.supabase.co"
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
+              className="w-full bg-[#070a12] border border-white/[0.08] rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
             />
           </div>
 
           {/* Supabase Anon Key */}
           <div>
-            <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+            <label className="block text-xs font-semibold text-slate-300 mb-1.5 font-sans">
               Supabase Anon Key (Optional)
             </label>
             <input
@@ -119,10 +117,10 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
               value={supabaseAnonKey}
               onChange={(e) => setSupabaseAnonKey(e.target.value)}
               placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
+              className="w-full bg-[#070a12] border border-white/[0.08] rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-600 font-mono focus:border-emerald-500 transition-colors"
             />
             <p className="text-[11px] text-slate-500 mt-1">
-              If omitted, applications and audit logs are safely stored in resilient browser LocalStorage.
+              If omitted, applications and audit logs are safely preserved in resilient browser LocalStorage.
             </p>
           </div>
 
@@ -131,7 +129,7 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
             <button
               type="button"
               onClick={handleResetStorage}
-              className="w-full flex items-center justify-center space-x-2 px-3 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-white text-xs transition-colors"
+              className="w-full flex items-center justify-center space-x-2 px-3 py-2 rounded-xl bg-[#070a12] hover:bg-white/[0.06] border border-white/[0.08] text-slate-400 hover:text-white text-xs transition-colors font-mono"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset Synthetic Demo Personas & Logs</span>
@@ -139,7 +137,7 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
           </div>
 
           {/* Footer Buttons */}
-          <div className="pt-4 border-t border-slate-800 flex justify-end space-x-2">
+          <div className="pt-4 border-t border-white/[0.08] flex justify-end space-x-2">
             <button
               type="button"
               onClick={onClose}
@@ -149,7 +147,7 @@ export function SettingsModal({ onClose, onSettingsUpdated }) {
             </button>
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/30 transition-all"
+              className="px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-500 shadow-gov-glow transition-all"
             >
               Save Configuration
             </button>

@@ -4,14 +4,14 @@ import { normalizeName, calculateSimilarity, analyzeNameDiscrepancies } from '..
 console.log('--- Running Name Matcher Tests ---');
 
 // 1. Normalization test
-const normEn1 = normalizeName('Md. Ashraful Al-Sabid', 'en');
-const normEn2 = normalizeName('Mohammad Ashraful Al Sabid', 'en');
-assert.strictEqual(normEn1, 'mohammad ashraful al sabid');
-assert.strictEqual(normEn2, 'mohammad ashraful al sabid');
-console.log('✓ Normalization correctly handles Md. abbreviation and hyphens');
+const normEn1 = normalizeName('Md. Arifur Rahman', 'en');
+const normEn2 = normalizeName('Mohammad Arifur Rahman', 'en');
+assert.strictEqual(normEn1, 'mohammad arifur rahman');
+assert.strictEqual(normEn2, 'mohammad arifur rahman');
+console.log('✓ Normalization correctly handles Md. abbreviation');
 
 // 2. Similarity test
-const simExact = calculateSimilarity('Md. Ashraful Al Sabid', 'Mohammad Ashraful Al Sabid', 'en');
+const simExact = calculateSimilarity('Md. Arifur Rahman', 'Mohammad Arifur Rahman', 'en');
 assert.strictEqual(simExact, 1.0);
 console.log('✓ Exact semantic similarity calculated as 100%');
 

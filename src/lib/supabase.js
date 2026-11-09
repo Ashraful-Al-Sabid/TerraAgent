@@ -79,9 +79,12 @@ export function getSupabase() {
   return null;
 }
 
-// Initialize Local Store with Presets if empty
+// Initialize Local Store with Presets if empty or upgrade legacy names
 function initLocalStore() {
-  if (!safeStorage.getItem(STORAGE_APPS)) {
+  const existing = safeStorage.getItem(STORAGE_APPS);
+  const needsSeed = !existing || existing.includes('Sabid') || existing.includes('Ashraful');
+
+  if (needsSeed) {
     const seeded = PRESET_APPLICATIONS.map((preset, idx) => ({
       id: preset.id,
       application_number: `TERRA-2026-${1000 + idx}`,

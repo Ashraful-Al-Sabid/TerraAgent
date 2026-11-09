@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { CitizenPortal } from './components/CitizenPortal';
-import { OfficerDashboard } from './components/OfficerDashboard';
-import { DossierReportModal } from './components/DossierReportModal';
-import { CorrectionModal } from './components/CorrectionModal';
-import { SettingsModal } from './components/SettingsModal';
-import { PRESET_APPLICATIONS } from './data/presetApplications';
-import { orchestrateVerificationWorkflow } from './services/orchestrator';
-import { fetchDossierByAppId, saveApplicationRecord } from './lib/supabase';
+import { Navbar } from './components/Navbar.jsx';
+import { CitizenPortal } from './components/CitizenPortal.jsx';
+import { OfficerDashboard } from './components/OfficerDashboard.jsx';
+import { DossierReportModal } from './components/DossierReportModal.jsx';
+import { CorrectionModal } from './components/CorrectionModal.jsx';
+import { SettingsModal } from './components/SettingsModal.jsx';
+import { PRESET_APPLICATIONS } from './data/presetApplications.js';
+import { orchestrateVerificationWorkflow } from './services/orchestrator.js';
+import { fetchDossierByAppId, saveApplicationRecord } from './lib/supabase.js';
 
 export function App() {
   const [activeTab, setActiveTab] = useState('citizen'); // 'citizen' or 'officer'
@@ -78,7 +78,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white flex flex-col selection:bg-emerald-600 selection:text-white font-sans">
+    <div className="min-h-screen bg-[#070a12] text-white flex flex-col selection:bg-emerald-600 selection:text-white font-sans">
       
       {/* Top Navigation */}
       <Navbar
@@ -110,17 +110,17 @@ export function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
+      <footer className="border-t border-white/[0.08] bg-[#070a12] py-6 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2">
-            <span className="font-semibold text-slate-400">TerraAgent</span>
+            <span className="font-semibold text-slate-300">TerraAgent</span>
             <span>•</span>
             <span className="font-bangla">টেকসই ভূমি সেবা অটোমেশন প্ল্যাটফর্ম</span>
           </div>
-          <div className="flex items-center space-x-4 text-[11px]">
-            <span>AI Builders Fest 2026</span>
+          <div className="flex items-center space-x-4 text-[11px] font-mono">
+            <span>GovTech Bangladesh</span>
             <span>•</span>
-            <span className="text-emerald-500/80">Autonomous Multi-Agent System</span>
+            <span className="text-emerald-400">Autonomous Public Service Verification Core</span>
           </div>
         </div>
       </footer>

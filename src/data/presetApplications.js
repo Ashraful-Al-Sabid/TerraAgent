@@ -8,15 +8,15 @@ export const PRESET_APPLICATIONS = [
     label: 'Persona 1: Clean Mutation (Fast-track Approval)',
     badge: 'High Integrity (96%)',
     badgeColor: 'emerald',
-    description: 'Sabid - Perfect NID, BRIS, & clean BS Khatian in Uttara, Dhaka.',
+    description: 'Arifur Rahman - Perfect NID, BRIS, & clean BS Khatian in Uttara, Dhaka.',
     data: {
-      applicant_name_en: 'Md. Ashraful Al Sabid',
-      applicant_name_bn: 'মো: আশরাফুল আল সাবিদ',
+      applicant_name_en: 'Md. Arifur Rahman',
+      applicant_name_bn: 'মো: আরিফুর রহমান',
       nid_number: '19942692015000101',
       bris_number: '19942692015123456',
       dob: '1994-05-14',
       phone: '+8801712345678',
-      email: 'ashrafulalsabid@gmail.com',
+      email: 'arifur.rahman@example.com',
       division: 'Dhaka',
       district: 'Dhaka',
       upazila: 'Uttara',
@@ -30,12 +30,12 @@ export const PRESET_APPLICATIONS = [
         {
           id: 'doc-1',
           doc_type: 'nid_card',
-          file_name: 'NID_Ashraful_Al_Sabid.pdf',
+          file_name: 'NID_Arifur_Rahman.pdf',
           file_size: 420500,
           status: 'verified',
           extracted_data: {
-            extracted_name_en: 'Md. Ashraful Al Sabid',
-            extracted_name_bn: 'মো: আশরাফুল আল সাবিদ',
+            extracted_name_en: 'Md. Arifur Rahman',
+            extracted_name_bn: 'মো: আরিফুর রহমান',
             extracted_nid: '19942692015000101',
             extracted_dob: '1994-05-14',
             ocr_confidence: 99.4
@@ -51,7 +51,7 @@ export const PRESET_APPLICATIONS = [
             extracted_khatian: 'KH-4082',
             extracted_plot: 'PL-889',
             extracted_mouza: 'Baunia',
-            recorded_owner: 'Md. Ashraful Al Sabid',
+            recorded_owner: 'Md. Arifur Rahman',
             ocr_confidence: 97.8
           }
         },
@@ -65,7 +65,7 @@ export const PRESET_APPLICATIONS = [
             deed_number: '3942/2018',
             sub_registry_office: 'Uttara Sub-Registry',
             transferor: 'Al-Haj Mofizur Rahman',
-            transferee: 'Md. Ashraful Al Sabid',
+            transferee: 'Md. Arifur Rahman',
             ocr_confidence: 96.2
           }
         }

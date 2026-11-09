@@ -12,7 +12,7 @@
 ## 📌 Executive Summary
 
 In Bangladesh, public administration services—particularly **Land Mutation (ই-নামজারি)**, **Record of Rights verification (খতিয়ান/পর্চা)**, and **Citizen Identity authentication**—suffer from severe operational bottlenecks:
-1. **Linguistic & Transliteration Discrepancies**: Spelling variance between Bengali script (`মো: আশরাফুল আল সাবিদ`) and English transliterations (`Md. Ashraful Al Sabid` vs `Mohammad Ashraful Al-Sabit`) triggers lengthy bureaucratic delays or wrongful rejections.
+1. **Linguistic & Transliteration Discrepancies**: Spelling variance between Bengali script (`মো: আরিফুর রহমান`) and English transliterations (`Md. Arifur Rahman` vs `Mohammad Arifur Rahman`) triggers lengthy bureaucratic delays or wrongful rejections.
 2. **Disconnected Registries**: Manual cross-checking between the National ID (EC), Birth Registration (BRIS), and Directorate of Land Records & Surveys (DLRS) consumes weeks for Upazila Land Officers (AC Land) and Kanungos.
 3. **Encumbrance & Fraud Risks**: Undetected court injunctions (মোকদ্দমা/নিষেধাজ্ঞা), tax arrears (ভূমি উন্নয়ন কর), and prohibited mutations of State Vested Property (অর্পিত সম্পত্তি).
 

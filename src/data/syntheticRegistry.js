@@ -6,8 +6,8 @@
 export const SYNTHETIC_NID_REGISTRY = [
   {
     nid_number: '19942692015000101',
-    name_en: 'Md. Ashraful Al Sabid',
-    name_bn: 'মো: আশরাফুল আল সাবিদ',
+    name_en: 'Md. Arifur Rahman',
+    name_bn: 'মো: আরিফুর রহমান',
     father_name_en: 'Abdul Mannan',
     father_name_bn: 'আব্দুল মান্নান',
     mother_name_en: 'Salma Begum',
@@ -74,8 +74,8 @@ export const SYNTHETIC_NID_REGISTRY = [
 export const SYNTHETIC_BRIS_REGISTRY = [
   {
     bris_number: '19942692015123456',
-    name_en: 'Md. Ashraful Al Sabid',
-    name_bn: 'মো: আশরাফুল আল সাবিদ',
+    name_en: 'Md. Arifur Rahman',
+    name_bn: 'মো: আরিফুর রহমান',
     dob: '1994-05-14',
     birth_place: 'Dhaka',
     father_name_en: 'Abdul Mannan',
@@ -118,8 +118,8 @@ export const SYNTHETIC_LAND_REGISTRY = [
     jl_number: '12',
     khatian_number: 'KH-4082',
     plot_number: 'PL-889',
-    recorded_owner_en: 'Md. Ashraful Al Sabid',
-    recorded_owner_bn: 'মো: আশরাফুল আল সাবিদ',
+    recorded_owner_en: 'Md. Arifur Rahman',
+    recorded_owner_bn: 'মো: আরিফুর রহমান',
     recorded_nid: '19942692015000101',
     land_type: 'Bari (ভিটা/বাড়ি)',
     area_decimals: 5.50,
